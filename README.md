@@ -25,7 +25,7 @@ class Example extends Component {
       <EmptyPlaceholder placeholder={<div>placeholder if nothing display inside</div>}>
         {this.props.boolean && <div>show when boolean is truthy</div>}
 
-        <SomeComponentYouDontKnowWillItDisplayAnything />
+        <SomeComponentYouDontKnowIfItWillShowAnything />
       </EmptyPlaceholder>
     )
   }

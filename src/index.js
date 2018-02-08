@@ -7,7 +7,7 @@ import PropTypes from 'prop-types'
 
 function isEmpty (nodes) {
   const type = typeof nodes
-  if (type === 'string') {
+  if (type === 'string' || type === 'number') {
     return false
   } else if (type === 'object') {
     return Array.from(nodes).every(isEmpty)

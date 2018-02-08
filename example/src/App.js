@@ -22,12 +22,13 @@ export default class App extends Component {
       <div>
         <h1>File download page</h1>
         <EmptyPlaceholder placeholder='No file available'>
+
           {loading && <div>loading...</div>}
 
           {files.map(file => (
             <a href={file.url}>Download {file.name}</a>
           ))}
-          <SomeComponentYouDontKnowWillItDisplayAnything />
+          <SomeComponentYouDontKnowIfItWillShowAnything />
 
           <SomeComponentDependOnFilesButYouDontCareAboutTheLogicInside files={files} />
 
@@ -37,7 +38,7 @@ export default class App extends Component {
   }
 }
 
-class SomeComponentYouDontKnowWillItDisplayAnything extends Component {
+class SomeComponentYouDontKnowIfItWillShowAnything extends Component {
   render () {
     return Math.random() > 0.5 ? 'hi' : null
   }
