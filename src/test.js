@@ -49,12 +49,16 @@ describe('Children is single dom', () => {
 
 describe('Children is single deep dom', () => {
   it('deep dom', () => {
-    const block = shallow(<EmptyPlaceholder><p><h1>abc</h1></p></EmptyPlaceholder>)
+    const block = shallow(<EmptyPlaceholder>
+      <p><h1>abc</h1></p>
+    </EmptyPlaceholder>)
     expect(block.text()).not.toEqual(defaultPlaceholder)
   })
 
   it('deep dom (empty)', () => {
-    const block = shallow(<EmptyPlaceholder><p><h1></h1></p></EmptyPlaceholder>)
+    const block = shallow(<EmptyPlaceholder>
+      <p><h1></h1></p>
+    </EmptyPlaceholder>)
     expect(block.text()).toEqual(defaultPlaceholder)
   })
 })
@@ -78,7 +82,20 @@ describe('Children is array of dom', () => {
 
 describe('Children is iframe', () => {
   it('iframe', () => {
-    const block = shallow(<EmptyPlaceholder><iframe src='https://google.com' frameborder='0' /></EmptyPlaceholder>)
+    const block = shallow(<EmptyPlaceholder>
+      <iframe src='https://google.com' frameborder='0' />
+    </EmptyPlaceholder>)
     expect(block.text()).not.toEqual(defaultPlaceholder)
+  })
+})
+
+describe('Custom placeholder', () => {
+  it('placeholder is text', () => {
+    const block = shallow(<EmptyPlaceholder placeholder='nothing shows'></EmptyPlaceholder>)
+    expect(block.text()).toEqual('nothing shows')
+  })
+  it('placeholder is dom', () => {
+    const block = shallow(<EmptyPlaceholder placeholder={<h1>nothing shows</h1>}></EmptyPlaceholder>)
+    expect(block.html()).toEqual('<h1>nothing shows</h1>')
   })
 })
