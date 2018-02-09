@@ -1,0 +1,10 @@
+language:
+  node_js
+node_js:
+  - "9"
+install:
+  - yarn global add codecov
+  - yarn add react-scripts
+script:
+  - yarn run coverage
+  - codecov
