@@ -2,7 +2,7 @@
 
 > Placeholder component to wrap the content(other components) that you don't know if it will show anything
 
-[![NPM](https://img.shields.io/npm/v/react-empty-placeholder.svg)](https://www.npmjs.com/package/react-empty-placeholder) [![npm](https://img.shields.io/npm/l/react-empty-placeholder.svg)](https://www.npmjs.com/package/react-empty-placeholder) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/react-empty-placeholder.svg)](https://www.npmjs.com/package/react-empty-placeholder) [![NPM](https://img.shields.io/npm/l/react-empty-placeholder.svg)](https://www.npmjs.com/package/react-empty-placeholder) [![Travis](https://img.shields.io/travis/Donaldcwl/react-empty-placeholder.svg)](https://travis-ci.org/Donaldcwl/react-empty-placeholder/) [![Codecov](https://img.shields.io/codecov/c/github/Donaldcwl/react-empty-placeholder.svg)](https://codecov.io/gh/Donaldcwl/react-empty-placeholder) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
 
