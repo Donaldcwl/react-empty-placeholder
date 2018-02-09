@@ -5,12 +5,20 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-function isEmpty (nodes) {
-  const type = typeof nodes
+const excludedTags = ['iframe']
+
+function isEmpty (node) {
+  const type = typeof node
   if (type === 'string' || type === 'number') {
     return false
   } else if (type === 'object') {
-    return Array.from(nodes).every(isEmpty)
+    if (Array.isArray(node)) {
+      return node.every(isEmpty)
+    }
+    if (excludedTags.includes(node.type)) {
+      return false
+    }
+    return isEmpty(node.props.children)
   } else {
     return true
   }
@@ -23,8 +31,6 @@ export default class EmptyPlaceholder extends Component {
   static defaultProps = {
     placeholder: 'N/A',
   }
-
-  state = {}
 
   render () {
     return isEmpty(this.props.children) ? this.props.placeholder : this.props.children

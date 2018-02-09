@@ -1,6 +1,6 @@
 {
   "name": "react-empty-placeholder",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Placeholder component to wrap the content(other components) that you don't know if it will show anything",
   "author": "Donald <donaldcwl@gmail.com>",
   "license": "MIT",
@@ -41,6 +41,8 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "gh-pages": "^1.1.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
